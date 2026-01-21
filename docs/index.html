@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureView Interview - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 24px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .downloads {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .platform {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .platform-icon {
+            font-size: 1.5rem;
+        }
+        
+        .platform-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .download-options {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        .download-btn .info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .download-btn .arch {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+        
+        .download-btn .size {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+        
+        .download-btn .icon {
+            font-size: 1.5rem;
+        }
+        
+        .features {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .features h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #e4e4e7;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .feature-desc {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .requirements {
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .requirements h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+        
+        .requirements ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .requirements li {
+            font-size: 0.875rem;
+            color: #cbd5e1;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .requirements li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🛡️</div>
+            <h1>SecureView Interview</h1>
+            <p class="tagline">AI-Powered Secure Interview Platform</p>
+            <span class="version-badge">Version 1.0.0</span>
+        </header>
+        
+        <div class="downloads">
+            <div class="platform">
+                <div class="platform-header">
+                    <span class="platform-icon">🍎</span>
+                    <span class="platform-name">macOS</span>
+                </div>
+                <div class="download-options">
+                    <a href="https://github.com/ashishcloud/SecureView-releases/releases/download/v1.0.0/SecureView-Interview-1.0.0-arm64.dmg" class="download-btn">
+                        <div class="info">
+                            <span>Download for Apple Silicon</span>
+                            <span class="arch">M1 / M2 / M3 / M4</span>
+                            <span class="size">140 MB</span>
+                        </div>
+                        <span class="icon">⬇️</span>
+                    </a>
+                    <a href="https://github.com/ashishcloud/SecureView-releases/releases/download/v1.0.0/SecureView-Interview-1.0.0-x64.dmg" class="download-btn">
+                        <div class="info">
+                            <span>Download for Intel</span>
+                            <span class="arch">x64 Processor</span>
+                            <span class="size">146 MB</span>
+                        </div>
+                        <span class="icon">⬇️</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="platform">
+                <div class="platform-header">
+                    <span class="platform-icon">🪟</span>
+                    <span class="platform-name">Windows</span>
+                </div>
+                <div class="download-options">
+                    <a href="https://github.com/ashishcloud/SecureView-releases/releases/download/v1.0.0/SecureView-Interview-1.0.0-Setup.exe" class="download-btn">
+                        <div class="info">
+                            <span>Download Installer</span>
+                            <span class="arch">Windows 10/11 (64-bit)</span>
+                            <span class="size">112 MB</span>
+                        </div>
+                        <span class="icon">⬇️</span>
+                    </a>
+                    <a href="https://github.com/ashishcloud/SecureView-releases/releases/download/v1.0.0/SecureView-Interview-1.0.0-Portable.exe" class="download-btn">
+                        <div class="info">
+                            <span>Download Portable</span>
+                            <span class="arch">No installation required</span>
+                            <span class="size">112 MB</span>
+                        </div>
+                        <span class="icon">⬇️</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">AI Interviews</div>
+                    <div class="feature-desc">Powered by Salesforce Agentforce</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📹</div>
+                    <div class="feature-title">Face Detection</div>
+                    <div class="feature-desc">Real-time proctoring</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <div class="feature-title">Secure Environment</div>
+                    <div class="feature-desc">VM & remote detection</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Session Recording</div>
+                    <div class="feature-desc">Complete audit trail</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="requirements">
+            <h3>System Requirements</h3>
+            <ul>
+                <li>macOS 10.15+ or Windows 10+</li>
+                <li>4GB RAM (8GB recommended)</li>
+                <li>500MB free disk space</li>
+                <li>Webcam & microphone</li>
+                <li>Stable internet connection</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>© 2025 SecureView Inc. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://github.com/ashishcloud/SecureView-releases/issues">Report an Issue</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
