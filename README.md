@@ -10,12 +10,21 @@
 
 ## 📥 Download
 
-| Platform | Architecture | Download |
-|----------|--------------|----------|
-| macOS | Apple Silicon (M1/M2/M3) | [Download arm64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-arm64.dmg) |
-| macOS | Intel | [Download x64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-x64.dmg) |
+### macOS
 
-> **Note:** Windows and Linux versions coming soon.
+| Architecture | Download |
+|--------------|----------|
+| Apple Silicon (M1/M2/M3) | [Download arm64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-arm64.dmg) |
+| Intel | [Download x64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-x64.dmg) |
+
+### Windows
+
+| Type | Download |
+|------|----------|
+| Installer | [Download Setup.exe](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-Setup.exe) |
+| Portable | [Download Portable.exe](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-Portable.exe) |
+
+> **Note:** Linux version coming soon.
 
 ---
 
@@ -34,6 +43,12 @@
 - **Screen Recording:** Screen capture for session review
 - **Accessibility:** Application monitoring (optional)
 
+### Windows
+- **Minimum:** Windows 10 (64-bit)
+- **Recommended:** Windows 11
+- **RAM:** 4GB minimum, 8GB recommended
+- **Storage:** 500MB free space
+
 ---
 
 ## 🔧 Installation
@@ -51,6 +66,16 @@
 4. **First launch:** Right-click the app and select "Open" (required for unsigned apps)
 
 5. Grant the required permissions when prompted
+
+### Windows
+
+1. Download the **Installer** (recommended) or **Portable** version
+
+2. **Installer:** Run the Setup.exe and follow the wizard
+
+3. **Portable:** Extract and run directly (no installation needed)
+
+4. Grant camera and microphone permissions when prompted
 
 ---
 
@@ -73,6 +98,7 @@
 - AI interview with Salesforce Agentforce
 - Comprehensive proctoring system
 - macOS support (arm64 and x64)
+- Windows support (x64 Installer and Portable)
 
 ---
 
