@@ -14,15 +14,15 @@
 
 | Architecture | Download |
 |--------------|----------|
-| Apple Silicon (M1/M2/M3) | [Download arm64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-arm64.dmg) |
-| Intel | [Download x64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-x64.dmg) |
+| Apple Silicon (M1/M2/M3) | [Download arm64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-arm64.dmg) |
+| Intel | [Download x64 DMG](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-x64.dmg) |
 
 ### Windows
 
 | Type | Download |
 |------|----------|
-| Installer | [Download Setup.exe](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-Setup.exe) |
-| Portable | [Download Portable.exe](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-1.0.0-Portable.exe) |
+| Installer | [Download Setup.exe](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-Setup.exe) |
+| Portable | [Download Portable.exe](https://github.com/ashishcloud/SecureView-releases/releases/latest/download/SecureView-Interview-Portable.exe) |
 
 > **Note:** Linux version coming soon.
 
